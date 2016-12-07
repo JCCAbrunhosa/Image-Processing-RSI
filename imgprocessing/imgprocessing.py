@@ -21,6 +21,9 @@ img = cv2.imread('test.png')
 dst = cv2.fastNlMeansDenoisingColored(img,None,10,10,7,21)
 plt.subplot(121),plt.imshow(img)
 
+#Resize image
+img=cv2.resize(img,None,fx=1.5, fy=1.5, interpolation = cv2.INTER_LINEAR)
+
 #Converts image to gray to use on the next treshhold function
 imgray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 
